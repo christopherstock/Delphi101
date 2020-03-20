@@ -6,7 +6,7 @@
         <Projects Include="DelphiVclPrimer.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Unit1.dproj">
+        <Projects Include="ConsoleApp.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -26,23 +26,23 @@
     <Target Name="DelphiVclPrimer:Make">
         <MSBuild Projects="DelphiVclPrimer.dproj" Targets="Make"/>
     </Target>
-    <Target Name="Unit1">
-        <MSBuild Projects="Unit1.dproj"/>
+    <Target Name="ConsoleApp">
+        <MSBuild Projects="ConsoleApp.dproj"/>
     </Target>
-    <Target Name="Unit1:Clean">
-        <MSBuild Projects="Unit1.dproj" Targets="Clean"/>
+    <Target Name="ConsoleApp:Clean">
+        <MSBuild Projects="ConsoleApp.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="Unit1:Make">
-        <MSBuild Projects="Unit1.dproj" Targets="Make"/>
+    <Target Name="ConsoleApp:Make">
+        <MSBuild Projects="ConsoleApp.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="DelphiVclPrimer;Unit1"/>
+        <CallTarget Targets="DelphiVclPrimer;ConsoleApp"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DelphiVclPrimer:Clean;Unit1:Clean"/>
+        <CallTarget Targets="DelphiVclPrimer:Clean;ConsoleApp:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DelphiVclPrimer:Make;Unit1:Make"/>
+        <CallTarget Targets="DelphiVclPrimer:Make;ConsoleApp:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

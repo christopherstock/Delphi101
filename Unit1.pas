@@ -11,11 +11,13 @@ uses
   Vcl.Graphics,
   Vcl.Controls,
   Vcl.Forms,
-  Vcl.Dialogs;
+  Vcl.Dialogs, Vcl.StdCtrls;
 
 type
 
-  TForm1 = class( TForm )
+  TJokeForm = class( TForm )
+    JokeButton: TButton;
+    JokeLabel: TLabel;
 
   private
 
@@ -33,7 +35,7 @@ type
 
 var
 
-  Form1: TForm1;
+  JokeForm: TJokeForm;
 
 implementation
 

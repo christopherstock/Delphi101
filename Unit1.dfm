@@ -1,8 +1,8 @@
-object Form1: TForm1
+object JokeForm: TJokeForm
   Left = 0
   Top = 0
-  Caption = 'Form1'
-  ClientHeight = 299
+  Caption = 'ICNDB - RandomJoke Requester, v.1.0.0'
+  ClientHeight = 125
   ClientWidth = 635
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,4 +13,18 @@ object Form1: TForm1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object JokeLabel: TLabel
+    Left = 27
+    Top = 24
+    Width = 573
+    Height = 13
+  end
+  object JokeButton: TButton
+    Left = 24
+    Top = 80
+    Width = 585
+    Height = 25
+    Caption = 'Request a Random Joke'
+    TabOrder = 0
+  end
 end

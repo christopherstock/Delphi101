@@ -99,7 +99,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="Unit1.pas">
-            <Form>Form1</Form>
+            <Form>JokeForm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <None Include="Unit1.dpr"/>
