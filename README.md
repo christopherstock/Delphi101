@@ -14,7 +14,7 @@ Dieser Workshop behandelt die wichtigsten Grundlagen der Entwicklungsumgebung **
 
 # RAD Studio
 
-![RAD Studio](https://github.com/christopherstock/Delphi101/raw/master/_ASSET/logo/logo_rad-studio.png)
+![RAD Studio](https://github.com/christopherstock/Delphi101/raw/master/_ASSET/readme/logo_rad-studio.png)
 
 Das RAD Studio kann auf der [Webseite von Embarcadero](https://www.embarcadero.com/de/products/rad-studio)
  heruntergeladen werden. Es handelt es sich um ein kommerzielles Produkt.
@@ -23,7 +23,7 @@ Das RAD Studio kann auf der [Webseite von Embarcadero](https://www.embarcadero.c
 
 # Windows Only!
 
-![Visual Component Library](https://github.com/christopherstock/Delphi101/raw/master/_ASSET/logo/logo_vcl.png)
+![Visual Component Library](https://github.com/christopherstock/Delphi101/raw/master/_ASSET/readme/logo_vcl.png)
 
 Open Pascal ist zwar für alle Plattformen verfügbar, die Entwicklungsumgebung **RAD Studio** sowie die nativen Klassen
  aus dem **VCL-Framework** aber leider nur für Windows-Systeme implementiert.
@@ -57,46 +57,22 @@ Es sollte nun ein leeres Anwendungsfenster zu sehen sein. Beim schließen des Fe
 
 ![The International Chuck Norris Database](https://github.com/christopherstock/Delphi101/raw/master/_ASSET/readme/chuck.png)
 
-
-
-
-
-
 ## Development
 
-Die folgenden Aufgaben können im Rahmen eines Coding Dojos oder im Workshopformat durchgeführt werden:
+Die folgenden Aufgaben können nun im Rahmen eines Coding Dojos oder im Workshopformat durchgeführt werden:
 
-1. Setzen Sie den gewünschten Titel, Breite und Höhe für das Anwendungsfenster durch Anpassen der Datei `MainWindow.xaml`.
+1. Setzen Sie den gewünschten Titel, Breite und Höhe für das Anwendungsfenster durch Anpassen der Datei `Unit1.dfm`.
 
-2. Erstellen Sie innerhalb des Anwendungsframes einen Button mit der Beschriftung `Request a Joke`.
+2. Erstellen Sie innerhalb des Anwendungsframes einen neuen Button vom Typ `TButton` aus dem Punkt **Standard**
+ des Werkzeugfensters **Palette** mit der Beschriftung `Request a Joke` und dem internen Bezeichner `JokeButton`.
 
-3. Erstellen Sie unterhalb des Buttons einen **TextBlock** innerhalb eines **ScrollViewer** Elements um ein
- vertikal Scrollbares read-only Textfeld zu realisieren.
+3. Erstellen Sie unterhalb des Buttons ein Ausgabefeld vom Typ `TLabel` und dem internen Bezeichner `JokeLabel`.
 
-4. Beim Betätigen des Buttons soll eine Nachricht mit abschließendem Zeilenumbruch innerhalb des **TextBlocks**
- ausgegeben werden.
+4. Beim Betätigen des Buttons soll eine Nachricht im Element `JokeLabel` ausgegeben werden.
 
 5. Anstelle der ausgegebenen Nachricht soll nun beim Klick auf den Button ein HTTP GET-Request auf die **International
  Chuck Norris Database** durchgeführt werden. Die entsprechende URL lautet `http://api.icndb.com/jokes/random`.
  Der gesamte Response-Body soll im **TextBlock** ausgegeben werden.
 
-6. Der empfangene JSON-Body in Form eines Strings soll nun nicht mehr direkt im **TextBlock** ausgegeben werden,
- sondern mittels der Bibliothek **Newtonsoft.json** über den **NuGet Package Manager** installiert werden.
- Hierfür muss im Projektverzeichnis der folgende Befehl ausgeführt werden:
-
-`dotnet add package Newtonsoft.json`
-
-7. Erstellen Sie eine neue Klasse **RandomJoke** die ein Modell der erhaltenen JSON-Response repräsentiert.
- Mittels der neuen Bibliothek **Newtonsoft.json** können Sie anschließend den erhaltenen JSON-String in eine
- Instanz dieser Klasse parsen. Hierfür können Sie die folgende statische Funktion im Code verwenden:
-
-`Newtonsoft.Json.JsonConvert.DeserializeObject<RandomJoke>( receivedJsonString )`
-
-Nun können Sie im Ausgabefeld **TextBlock** gezielt den Witz ausgeben lassen.
-
-8. Nach jeder Ausgabe im **TextBlock** soll anschließend das Feld bis ans Ende gescrollt werden.
-
-9. Im Fehlerfall ( API nicht erreichbar oder Client offline ) soll anstatt des Witzes eine generische Fehlermeldung
- im **TextBlock** erscheinen.
-
-10. Lagern Sie die Funktionalität des API-Requests in eine neue Klasse `Api` aus.
+6. Anstatt des gesamten Bodies soll lediglich der Wert des Felds `value > joke` des JSON-Bodies im Element `JokeLabel`
+ ausgegeben werden. Somit wird im Ausgabefeld gezielt den Witz ausgegeben.
