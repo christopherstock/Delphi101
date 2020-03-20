@@ -7,13 +7,23 @@ Dieser Workshop behandelt die wichtigsten Grundlagen der Entwicklungsumgebung **
  **Pascal**. Mit Hilfe des **RAD Studios** erstellen wir eine Delphi UI-Anwendung unter Verwendung der VCL (Visual
  Component Library), mit der auf Knopfdruck ein Witz aus der **International Chuck Norris Database** angefordert
  und in einem TextFeld unserer UI-Anwendung angezeigt wird. Für das Handling der HTTP-Request- u. -Responses werden die
- nativen Klassen um [REST.Client.TRESTClient](http://docwiki.embarcadero.com/Libraries/Rio/de/REST.Client.TRESTClient).
+ nativen Klassen um [REST.Client.TRESTClient](http://docwiki.embarcadero.com/Libraries/Rio/de/REST.Client.TRESTClient)
+ verwendet.
+
+<hr>
+
+# RAD Studio
+
+![RAD Studio](https://github.com/christopherstock/DotNetWpfPrimer/raw/master/_ASSET/logo/logo_rad-studio.png)
+
+Das RAD Studio kann auf der [Webseite von Embarcadero](https://www.embarcadero.com/de/products/rad-studio)
+ heruntergeladen werden. Es handelt es sich um ein kommerzielles Produkt.
 
 <hr>
 
 # Windows Only!
 
-![Visual Component Library](https://github.com/christopherstock/DotNetWpfPrimer/raw/master/_ASSET/logo/logo_wpf.png)
+![Visual Component Library](https://github.com/christopherstock/DotNetWpfPrimer/raw/master/_ASSET/logo/logo_vcl.png)
 
 Open Pascal ist zwar für alle Plattformen verfügbar, die Entwicklungsumgebung **RAD Studio** sowie die nativen Klassen
  aus dem **VCL-Framework** aber leider nur für Windows-Systeme implementiert.
