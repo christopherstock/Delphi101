@@ -14,7 +14,7 @@ Dieser Workshop behandelt die wichtigsten Grundlagen der Entwicklungsumgebung **
 
 # RAD Studio
 
-![RAD Studio](https://github.com/christopherstock/DotNetWpfPrimer/raw/master/_ASSET/logo/logo_rad-studio.png)
+![RAD Studio](https://github.com/christopherstock/Delphi101/raw/master/_ASSET/logo/logo_rad-studio.png)
 
 Das RAD Studio kann auf der [Webseite von Embarcadero](https://www.embarcadero.com/de/products/rad-studio)
  heruntergeladen werden. Es handelt es sich um ein kommerzielles Produkt.
@@ -23,52 +23,44 @@ Das RAD Studio kann auf der [Webseite von Embarcadero](https://www.embarcadero.c
 
 # Windows Only!
 
-![Visual Component Library](https://github.com/christopherstock/DotNetWpfPrimer/raw/master/_ASSET/logo/logo_vcl.png)
+![Visual Component Library](https://github.com/christopherstock/Delphi101/raw/master/_ASSET/logo/logo_vcl.png)
 
 Open Pascal ist zwar für alle Plattformen verfügbar, die Entwicklungsumgebung **RAD Studio** sowie die nativen Klassen
  aus dem **VCL-Framework** aber leider nur für Windows-Systeme implementiert.
 
 <hr>
 
-
-
-
-
-
 ## Tech Stack
 
-- .NET Core 3.0.3
-- NUnit 3.12.0
-- Microsoft.NET.Test.Sdk 16.5.0
-- NUnit3TestAdapter 3.16.1
+- Delphi 10.3.3
+- RAD Studio 20.0
 
 <hr>
 
 ## Projekt-Setup
 
-![Install](https://github.com/christopherstock/DotNetWpfPrimer/raw/master/_ASSET/logo/icon_install.png)
+### 1. Ein neues VCL Projekt anlegen
 
-### 1. DotNet-Projekt anlegen
+Installieren Sie das **RAD Studio** und öffnen Sie die Entwicklungsumgebung. Verwenden Sie hierzu den Menübefehl
+ **Datei > Neu > Windows-VCL-Anwendung**.
 
-Installieren Sie das *.NET Core SDK 3.0* oder *3.1* und wechseln Sie auf der Konsole in Ihren Workspace. Erstellen Sie
- hier ein neues WPF-Projekt mit dem folgenden Befehl. Dabei wird auch ein neuer Ordner für das Projekt erstellt:
-
-`dotnet new wpf -o DotNetWpfPrimer`
-
-Nachfolgend befindet sich das neue .NET WPF Projekt im neu erstellten Unterverzeichnis **DotNetWpfPrimer**.
+Nachfolgend wird eine neue VCL-Anwendung erstellt.
 
 ### 2. Projekt kompilieren und starten
 
-Zum Bauen und Starten der Anwendung müssen Sie in den neu erstellten Projektordner wechseln und den folgenden Befehl
- ausführen:
+Zum Bauen und Starten der Anwendung müssen Sie den **Ausführen** Button der IDE verwenden. Alternativ können Sie den
+ Shortcut **Strg + Shift + F9** hierfür benutzen.
 
-`dotnet run`
-
-Es sollte nun ein leeres Anwendungsfenster zu sehen sein. Beim schließen des Fensters endet unser CLI-Prozess.
+Es sollte nun ein leeres Anwendungsfenster zu sehen sein. Beim schließen des Fensters endet unser Prozess.
 
 <hr>
 
-![The International Chuck Norris Database](https://github.com/christopherstock/DotNetWpfPrimer/raw/master/_ASSET/logo/chuck.png)
+![The International Chuck Norris Database](https://github.com/christopherstock/Delphi101/raw/master/_ASSET/readme/chuck.png)
+
+
+
+
+
 
 ## Development
 
@@ -87,8 +79,6 @@ Die folgenden Aufgaben können im Rahmen eines Coding Dojos oder im Workshopform
 5. Anstelle der ausgegebenen Nachricht soll nun beim Klick auf den Button ein HTTP GET-Request auf die **International
  Chuck Norris Database** durchgeführt werden. Die entsprechende URL lautet `http://api.icndb.com/jokes/random`.
  Der gesamte Response-Body soll im **TextBlock** ausgegeben werden.
-
-![NuGet](https://github.com/christopherstock/DotNetWpfPrimer/raw/master/_ASSET/logo/logo_NuGet.png)
 
 6. Der empfangene JSON-Body in Form eines Strings soll nun nicht mehr direkt im **TextBlock** ausgegeben werden,
  sondern mittels der Bibliothek **Newtonsoft.json** über den **NuGet Package Manager** installiert werden.
@@ -110,42 +100,3 @@ Nun können Sie im Ausgabefeld **TextBlock** gezielt den Witz ausgeben lassen.
  im **TextBlock** erscheinen.
 
 10. Lagern Sie die Funktionalität des API-Requests in eine neue Klasse `Api` aus.
-
-![NUnit](https://github.com/christopherstock/DotNetWpfPrimer/raw/master/_ASSET/logo/logo_nunit.png)
-
-11. Nutzen Sie die folgenden Befehle zur Installation der folgenden Pakete um NUnit-Tests
- innerhalb Ihres Projekts verwenden zu können:
-
-```
-dotnet add package NUnit
-dotnet add package NUnit3TestAdapter
-dotnet add package Microsoft.NET.Test.Sdk
-```
-
-12. Testklassen können überall innerhalb unseres Projekts definiert werden. Wir wollen den folgenden Inhalt als neue
- Testklasse in `Tests/ApiTest.cs` zu unserem Projekt hinzufügen:
-
-```
-using NUnit.Framework;
-
-namespace DotNetWpfPrimer.Tests
-{
-    [TestFixture]
-    public class ApiTest
-    {
-        [Test]
-        public void Test_ICNDB_URL()
-        {
-            var url = Api.GetRandomJokeUrl();
-
-            Assert.AreEqual( "http://api.icndb.com/jokes/random", url );
-        }
-    }
-}
-```
-
-13. Führen Sie alle Tests innerhalb Ihres Projekts aus indem Sie den folgenden Befehl auf der Kommandozeile verwenden:
-
-`dotnet test`
-
-14. Passen Sie die Klasse `Api` so an, dass die vorgegebene Testklasse erfolgreich durchlaufen wird.
