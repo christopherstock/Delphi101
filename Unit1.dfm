@@ -26,5 +26,6 @@ object JokeForm: TJokeForm
     Height = 25
     Caption = 'Request a Random Joke'
     TabOrder = 0
+    OnClick = JokeButtonClick
   end
 end
