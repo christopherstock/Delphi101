@@ -53,14 +53,8 @@ procedure TJokeForm.JokeButtonClick(Sender: TObject);
 
     JokeLabel.Caption := Concat( 'Connect to: ', URL_ICNDB );
 
-    RESTClient1.BaseURL := URL_ICNDB;
-
-    RESTRequest1.Method := TRESTRequestMethod.rmGET;
-    RESTRequest1.Client := RESTClient1;
-
     RESTRequest1.Execute;
-
-    JokeLabel.Caption := RESTResponse1.JSONText;
+    jValue:=RESTResponse1.JSONValue;
 
 
 

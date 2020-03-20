@@ -28,21 +28,4 @@ object JokeForm: TJokeForm
     TabOrder = 0
     OnClick = JokeButtonClick
   end
-  object RESTClient1: TRESTClient
-    Params = <>
-    Left = 456
-    Top = 16
-  end
-  object RESTRequest1: TRESTRequest
-    Client = RESTClient1
-    Params = <>
-    Response = RESTResponse1
-    SynchronizedEvents = False
-    Left = 512
-    Top = 16
-  end
-  object RESTResponse1: TRESTResponse
-    Left = 392
-    Top = 16
-  end
 end
