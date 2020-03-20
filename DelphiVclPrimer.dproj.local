@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.093,C:\Users\stock\Documents\Embarcadero\Studio\Projekte\Project1.dproj=C:\Users\stock\workspaces\delphi\DelphiVclPrimer\DelphiVclPrimer.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.779,C:\Users\stock\Documents\Embarcadero\Studio\Projekte\Unit1.pas=C:\Users\stock\workspaces\delphi\DelphiVclPrimer\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.779,C:\Users\stock\Documents\Embarcadero\Studio\Projekte\Unit1.dfm=C:\Users\stock\workspaces\delphi\DelphiVclPrimer\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.270,=C:\Users\stock\workspaces\delphi\DelphiVclPrimer\Unit1.dpr</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.779,C:\Users\stock\workspaces\delphi\DelphiVclPrimer\Unit1.pas=C:\Users\stock\Documents\Embarcadero\Studio\Projekte\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.779,C:\Users\stock\workspaces\delphi\DelphiVclPrimer\Unit1.dfm=C:\Users\stock\Documents\Embarcadero\Studio\Projekte\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.680,=C:\Users\stock\Documents\Embarcadero\Studio\Projekte\Unit1.pas</Transaction>
-    <Transaction>2020.03.20 11:01:13.270,=C:\Users\stock\workspaces\delphi\DelphiVclPrimer\Unit1.dpr</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,C:\Users\stock\workspaces\delphi\DelphiVclPrimer\DelphiVclPrimer.dproj=C:\Users\stock\Documents\Embarcadero\Studio\Projekte\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>

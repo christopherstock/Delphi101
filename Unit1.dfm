@@ -16,7 +16,7 @@ object JokeForm: TJokeForm
   object JokeLabel: TLabel
     Left = 27
     Top = 24
-    Width = 573
+    Width = 3
     Height = 13
   end
   object JokeButton: TButton
