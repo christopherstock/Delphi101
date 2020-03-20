@@ -57,14 +57,12 @@ procedure TJokeForm.JokeButtonClick(Sender: TObject);
 
     RESTRequest1.Method := TRESTRequestMethod.rmGET;
     RESTRequest1.Client := RESTClient1;
-
     RESTRequest1.Execute;
 
-    JokeLabel.Caption := RESTResponse1.JSONText;
-
-
-
-
+    JokeLabel.Caption := RESTResponse1.JSONValue
+      .FindValue( 'value' )
+      .FindValue( 'joke' )
+      .ToString;
 
   end;
 

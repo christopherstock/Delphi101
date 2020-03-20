@@ -60,7 +60,12 @@ procedure TJokeForm.JokeButtonClick(Sender: TObject);
 
     RESTRequest1.Execute;
 
-    JokeLabel.Caption := RESTResponse1.JSONValue.;
+    JokeLabel.Caption := RESTResponse1.JSONText;
+
+
+
+    JokeLabel.Caption := RESTResponse1.JSONValue.FindValue( 'value' ).FindValue( 'joke' ).ToString;
+
 
 
 

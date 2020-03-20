@@ -12,13 +12,17 @@ uses
   Vcl.Controls,
   Vcl.Forms,
   Vcl.Dialogs,
-  Vcl.StdCtrls;
+  Vcl.StdCtrls, REST.Types, REST.Client, Data.Bind.Components,
+  Data.Bind.ObjectScope;
 
 type
 
   TJokeForm = class( TForm )
     JokeButton: TButton;
     JokeLabel: TLabel;
+    RESTClient1: TRESTClient;
+    RESTRequest1: TRESTRequest;
+    RESTResponse1: TRESTResponse;
     procedure JokeButtonClick(Sender: TObject);
 
   private
@@ -49,8 +53,19 @@ procedure TJokeForm.JokeButtonClick(Sender: TObject);
 
     JokeLabel.Caption := Concat( 'Connect to: ', URL_ICNDB );
 
+    RESTClient1.BaseURL := URL_ICNDB;
+
+    RESTRequest1.Method := TRESTRequestMethod.rmGET;
+    RESTRequest1.Client := RESTClient1;
+
     RESTRequest1.Execute;
-    jValue:=RESTResponse1.JSONValue;
+
+    JokeLabel.Caption := RESTResponse1.JSONText;
+
+
+
+    JokeLabel.Caption := ( RESTResponse1.JSONValue as TJSONObject ).GetValue( 'value' ).ToString();
+
 
 
 
